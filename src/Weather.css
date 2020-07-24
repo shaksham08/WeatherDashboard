@@ -17,6 +17,15 @@
   background-repeat: no-repeat;
   box-sizing: border-box;
 }
+.fa {
+  margin: 175px;
+}
+
+.wrong .img {
+  font-size: 20rem;
+  margin: 3rem;
+  color: whitesmoke;
+}
 
 .city-name {
   font-size: 5rem;
@@ -60,6 +69,12 @@ i {
   color: whitesmoke;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 1200px) {
+  .wrong .img {
+    font-size: 20rem;
+    margin: 40px;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .main {
@@ -88,5 +103,16 @@ i {
     width: 100%;
     margin: 0 auto;
     font-size: 1.5rem;
+  }
+  .fa {
+    margin: 175px;
+  }
+
+  .wrong .img {
+    font-size: 12rem;
+  }
+
+  .wrong h1 {
+    font-size: 2rem;
   }
 }

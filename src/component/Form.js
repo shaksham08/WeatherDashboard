@@ -18,7 +18,6 @@ export default class Form extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
     this.props.getData(this.state.city);
     this.setState({
       city: "",
