@@ -20,4 +20,19 @@ You can see the live preview of this by clicking the below link also
 
 ## Below are some screenshots of the project as well
 
-![1](<"https://github.com/shaksham08/WeatherDashboard/blob/master/screenshots/Screenshot%20(348).png">)
+![one](https://github.com/shaksham08/WeatherDashboard/blob/master/screenshots/Screenshot%20(348).png)
+
+![two](https://github.com/shaksham08/WeatherDashboard/blob/master/screenshots/Screenshot%20(349).png)
+
+
+![two](https://github.com/shaksham08/WeatherDashboard/blob/master/screenshots/Screenshot%20(350).png)
+
+
+![two](https://github.com/shaksham08/WeatherDashboard/blob/master/screenshots/Screenshot%20(351).png)
+
+
+
+![two](https://github.com/shaksham08/WeatherDashboard/blob/master/screenshots/Screenshot%20(352).png)
+
+
+
