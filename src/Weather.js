@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { ToastContainer, toast, Zoom } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import sad from "./img/sad.svg";
 import Form from "./component/Form";
 import "./Weather.css";
 
@@ -23,11 +21,31 @@ export default class Weather extends Component {
     this.API_KEY = "f1d3869b47a9e7d6deac4290c4ec72a1";
     this.getData = this.getData.bind(this);
     this.kelvintocelcius = this.kelvintocelcius.bind(this);
+    this.changeBackground = this.changeBackground.bind(this);
   }
 
   componentDidMount() {
     this.getData("Delhi");
   }
+  changeBackground() {
+    let id = this.state.iconid;
+    if (id >= 200 && id <= 232) {
+      return "Thunderstorm";
+    } else if (id >= 300 && id <= 321) {
+      return "Drizzle";
+    } else if (id >= 500 && id <= 531) {
+      return "Rain";
+    } else if (id >= 600 && id <= 622) {
+      return "Snow";
+    } else if (id >= 801 && id <= 804) {
+      return "Clouds";
+    } else if (id === 800) {
+      return "Clear";
+    } else {
+      return "Others";
+    }
+  }
+
   async getData(city) {
     try {
       this.setState({
@@ -48,9 +66,9 @@ export default class Weather extends Component {
         loading: "loaded",
       });
     } catch (Err) {
-      toast.error("City Not Found", {
-        position: toast.POSITION.BOTTOM_CENTER,
-      });
+      // toast.error("City Not Found", {
+      //   position: toast.POSITION.BOTTOM_CENTER,
+      // });
       this.setState({
         error: true,
       });
@@ -87,18 +105,17 @@ export default class Weather extends Component {
     } else if (this.state.loading === "error") {
       torender = (
         <section className="wrong">
-          <i class="img far fa-sad-tear"></i>
+          <i className="img far fa-sad-tear"></i>
           <h1> OPPS!!! Something Went Wrong!!</h1>
         </section>
       );
     }
     return (
-      <div className="main">
+      <div className={`main ${this.changeBackground()}`}>
         <div className="form">
           <Form getData={this.getData} />
         </div>
         {torender}
-        <ToastContainer transition={Zoom} />
       </div>
     );
   }
