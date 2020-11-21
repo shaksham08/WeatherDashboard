@@ -2,7 +2,7 @@
 
 ## Build Instructions
 
-Note : Please make sure to install NodeJs before procedding
+Note : Please make sure to install NodeJs before proceddingg
 
 [Node JS](https://nodejs.org/en/)
 
